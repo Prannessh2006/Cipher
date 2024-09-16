@@ -72,3 +72,19 @@ int main(){
     printlist();
     
 }
+//question 2
+bool cycleexist(Node* head){
+    Node* curr=head;
+    Node* curr1=head;
+    if(head==NULL){
+        return false;
+    }
+    while(curr1!=NULL){
+        curr = curr->next;
+        curr1=curr1->next->next;
+        if(curr1==curr){
+            return true;
+        }
+    }
+    return false;
+}
