@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//question1
 struct Node{
     int data;
     Node* next;
