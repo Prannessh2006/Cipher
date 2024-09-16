@@ -64,3 +64,27 @@ int main(){
     delelement(value);
     printlist();
 }
+// Q.1 Write a program that defines a Student class and uses the this pointer in a member function to display the student's details.
+#include<iostream>
+using namespace std;
+class student{
+    int roll_no;
+    string name;
+    string section;
+    public:
+    student(int,string,string);
+    void display();
+};
+student::student(int a,string b,string c){
+    roll_no=a;
+    name=b;
+    section=c;
+}
+void student::display(){
+    cout <<"Student details\n";
+    cout << this->roll_no << " " << this->name << " " << this->section; 
+}
+int main(){
+    student s(21,"Krish","PD");
+    s.display();
+}
